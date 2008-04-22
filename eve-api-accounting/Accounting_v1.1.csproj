@@ -1,0 +1,374 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5C82E97-FDE8-4E2C-A21D-0F38B7004B37}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Accounting</RootNamespace>
+    <AssemblyName>Accounting</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\DataClass.cs">
+    </Compile>
+    <Compile Include="Classes\InternalResources.cs" />
+    <Compile Include="Classes\Options.cs" />
+    <Compile Include="Classes\Session.cs" />
+    <Compile Include="Dedicated Controls\AppSetup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\AppSetup.designer.cs">
+      <DependentUpon>AppSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\AccountBalances.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\AccountBalances.designer.cs">
+      <DependentUpon>AccountBalances.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlStatistics.designer.cs">
+      <DependentUpon>ControlStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlAssets.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlAssets.designer.cs">
+      <DependentUpon>ControlAssets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlIndustryJobs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlIndustryJobs.designer.cs">
+      <DependentUpon>ControlIndustryJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlKillLogView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlKillLogView.designer.cs">
+      <DependentUpon>ControlKillLogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlKillLogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlKillLogs.designer.cs">
+      <DependentUpon>ControlKillLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\StarbaseFuelPrices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\StarbaseFuelPrices.designer.cs">
+      <DependentUpon>StarbaseFuelPrices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\CorpStarbaseDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\CorpStarbaseDetails.designer.cs">
+      <DependentUpon>CorpStarbaseDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\CorpStarbaseListConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\CorpStarbaseListConfig.designer.cs">
+      <DependentUpon>CorpStarbaseListConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\EveConquerableStationsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\EveConquerableStationsList.designer.cs">
+      <DependentUpon>EveConquerableStationsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\CorpStarbaseList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\CorpStarbaseList.designer.cs">
+      <DependentUpon>CorpStarbaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\MapSovereignty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\MapSovereignty.designer.cs">
+      <DependentUpon>MapSovereignty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\EveRefTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\EveRefTypes.designer.cs">
+      <DependentUpon>EveRefTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\WalletJournalTransactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\WalletJournalTransactions.designer.cs">
+      <DependentUpon>WalletJournalTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\CorpMemberTracking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\CorpMemberTracking.designer.cs">
+      <DependentUpon>CorpMemberTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\EveAllianceList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\EveAllianceList.designer.cs">
+      <DependentUpon>EveAllianceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\ControlBase.designer.cs">
+      <DependentUpon>ControlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\CorpCorporationSheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\CorpCorporationSheet.designer.cs">
+      <DependentUpon>CorpCorporationSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\MainControl.designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dedicated Controls\StartPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dedicated Controls\StartPage.designer.cs">
+      <DependentUpon>StartPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FExceptionMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FExceptionMessage.designer.cs">
+      <DependentUpon>FExceptionMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormConfirm.Designer.cs">
+      <DependentUpon>FormConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IHostWindow.cs" />
+    <Compile Include="Interfaces\IMainControl.cs" />
+    <Compile Include="Interfaces\IProgressShower.cs" />
+    <Compile Include="Interfaces\IStartPage.cs" />
+    <Compile Include="Interfaces\IStartPageMenuItem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dedicated Controls\AppSetup.resx">
+      <DependentUpon>AppSetup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\AccountBalances.resx">
+      <DependentUpon>AccountBalances.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\ControlStatistics.resx">
+      <DependentUpon>ControlStatistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\ControlAssets.resx">
+      <DependentUpon>ControlAssets.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\ControlIndustryJobs.resx">
+      <DependentUpon>ControlIndustryJobs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\ControlKillLogView.resx">
+      <DependentUpon>ControlKillLogView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\ControlKillLogs.resx">
+      <DependentUpon>ControlKillLogs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\StarbaseFuelPrices.resx">
+      <DependentUpon>StarbaseFuelPrices.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\CorpStarbaseDetails.resx">
+      <DependentUpon>CorpStarbaseDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\CorpStarbaseListConfig.resx">
+      <DependentUpon>CorpStarbaseListConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\EveConquerableStationsList.resx">
+      <DependentUpon>EveConquerableStationsList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\CorpStarbaseList.resx">
+      <DependentUpon>CorpStarbaseList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\MapSovereignty.resx">
+      <DependentUpon>MapSovereignty.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\EveRefTypes.resx">
+      <DependentUpon>EveRefTypes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\WalletJournalTransactions.resx">
+      <DependentUpon>WalletJournalTransactions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\CorpMemberTracking.resx">
+      <DependentUpon>CorpMemberTracking.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\EveAllianceList.resx">
+      <DependentUpon>EveAllianceList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\ControlBase.resx">
+      <DependentUpon>ControlBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\CorpCorporationSheet.resx">
+      <DependentUpon>CorpCorporationSheet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dedicated Controls\StartPage.resx">
+      <DependentUpon>StartPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FExceptionMessage.resx">
+      <DependentUpon>FExceptionMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormConfirm.resx">
+      <DependentUpon>FormConfirm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\StartPageMenuCommandItem.resx">
+      <DependentUpon>StartPageMenuCommandItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="User Controls\StartPageMenuCommandItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\StartPageMenuCommandItem.designer.cs">
+      <DependentUpon>StartPageMenuCommandItem.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\apply.png" />
+    <None Include="Resources\hasChild.png" />
+    <None Include="Resources\blank.png" />
+    <None Include="Resources\droneBay.png" />
+    <None Include="Resources\cargoBay.png" />
+    <Content Include="comments.txt" />
+    <Content Include="Resources\header_back.png" />
+    <None Include="Resources\icon_corporation.png" />
+    <None Include="Resources\icon_alliance.png" />
+    <None Include="Resources\icon_members.png" />
+    <None Include="Resources\icon_control_tower.png" />
+    <None Include="Resources\icon_assets.png" />
+    <None Include="Resources\icon_killlogs.png" />
+    <None Include="Resources\highSlot.png" />
+    <None Include="Resources\isCorp.png" />
+    <None Include="Resources\no_portrait.jpeg" />
+    <None Include="Resources\icon_setup.png" />
+    <None Include="Resources\icon_wallet.png" />
+    <None Include="Resources\icon_table.png" />
+    <None Include="Resources\icon_stats.png" />
+    <None Include="Resources\icon_station.png" />
+    <None Include="Resources\lowSlot.png" />
+    <None Include="Resources\midSlot.png" />
+    <None Include="Resources\rigSlot.png" />
+    <None Include="Resources\no_image.png" />
+    <None Include="Resources\no_portrait.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
